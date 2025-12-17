@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram-боты для бизнеса</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Разработка Telegram-ботов для бизнеса. Автоматизация заявок и заказов за 3–5 дней.">
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111827;
+      --primary:#22c55e;
+      --wa:#25D366;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial,sans-serif}
+    body{
+      background:radial-gradient(1200px 600px at top,#0f172a,var(--bg));
+      color:var(--text);
+      line-height:1.6;
+    }
+    .container{max-width:1100px;margin:auto;padding:80px 20px}
+    h1{font-size:42px;margin-bottom:20px}
+    h2{font-size:32px;text-align:center;margin-bottom:40px}
+    p{color:var(--muted)}
+    section{margin-bottom:100px}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:16px 34px;
+      margin:10px 10px 0 0;
+      border-radius:14px;
+      font-size:18px;
+      font-weight:700;
+      text-decoration:none;
+      transition:.25s;
+    }
+    .btn.tg{
+      background:linear-gradient(135deg,#22c55e,#4ade80);
+      color:#052e16;
+      box-shadow:0 10px 30px rgba(34,197,94,.35);
+    }
+    .btn.wa{
+      background:linear-gradient(135deg,#25D366,#4ee59d);
+      color:#052e16;
+      box-shadow:0 10px 30px rgba(37,211,102,.35);
+    }
+    .btn:hover{transform:translateY(-4px)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+    .card{
+      background:linear-gradient(180deg,#0f172a,var(--card));
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.05);
+      transition:.25s;
+    }
+    .card:hover{transform:translateY(-6px)}
+
+    .price{
+      font-size:42px;
+      font-weight:800;
+      color:var(--primary);
+      text-align:center;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.05);
+    }
+
+    .fade{opacity:0;transform:translateY(30px);transition:.6s}
+    .fade.show{opacity:1;transform:none}
+
+    @media(max-width:700px){
+      h1{font-size:32px}
+      h2{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<header class="fade" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+  <div>
+    <h1>Telegram-боты для бизнеса<br>за 3–5 дней</h1>
+    <p>
+      Автоматизация заказов, заявок и поддержки клиентов.<br>
+      Бот отвечает вместо менеджера 24/7.
+    </p>
+
+    <a class="btn tg" href="https://t.me/CMR_bot_09" target="_blank">
+      <img src="images/telegram.png" width="22"> Telegram
+    </a>
+
+    <a class="btn wa" href="https://wa.me/996776539966" target="_blank">
+      WhatsApp
+    </a>
+  </div>
+
+  <img src="images/hero.png" alt="Telegram bot" style="width:100%;max-width:420px">
+</header>
+
+<!-- ПРОБЛЕМЫ -->
+<section class="fade">
+  <h2>Какие задачи решает бот</h2>
+  <div class="grid">
+    <div class="card">❌ Клиенты не ждут ответа</div>
+    <div class="card">⏱ Нет времени отвечать вручную</div>
+    <div class="card">📉 Теряются заявки и заказы</div>
+  </div>
+</section>
+
+<!-- ПРИМЕРЫ -->
+<section class="fade">
+  <h2>Примеры использования</h2>
+  <div class="grid">
+    <div class="card">🛒 Магазин — каталог и заказы</div>
+    <div class="card">🚗 СТО — запись на ремонт</div>
+    <div class="card">🍔 Доставка — меню и адрес</div>
+  </div>
+</section>
+
+<!-- ОБО МНЕ -->
+<section class="fade">
+  <h2>Обо мне</h2>
+  <div style="display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center">
+    <img src="images/me.jpg" alt="Разработчик" style="width:220px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.4)">
+    <div>
+      <p>
+        Я разработчик Telegram-ботов для бизнеса.<br>
+        Помогаю автоматизировать заказы, заявки и поддержку клиентов.
+      </p>
+      <p>
+        Работаю напрямую, без посредников.<br>
+        Подбираю решения под конкретные задачи бизнеса.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ЦЕНА -->
+<section class="fade">
+  <h2>Стоимость</h2>
+  <p class="price">от 100$</p>
+  <p style="text-align:center">Без подписки · Оплата один раз</p>
+</section>
+
+<!-- CTA -->
+<section class="fade">
+  <h2>Готовы начать?</h2>
+  <p style="text-align:center">Напишите — бесплатно подскажу решение</p>
+  <div style="text-align:center">
+    <a class="btn tg" href="https://t.me/CMR_bot_09" target="_blank">
+      <img src="images/telegram.png" width="22"> Telegram
+    </a>
+    <a class="btn wa" href="https://wa.me/996776539966" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  © 2025 · Telegram-боты для бизнеса
+</footer>
+
+<script>
+  const items=document.querySelectorAll('.fade');
+  const obs=new IntersectionObserver(e=>{
+    e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')});
+  },{threshold:.2});
+  items.forEach(i=>obs.observe(i));
+</script>
+
+</body>
+</html>
